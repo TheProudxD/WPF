@@ -58,9 +58,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Calculator\IntegralCalculateRectangle.cs" />
-    <Compile Include="Calculator\IntegralCalculateTrapecia.cs" />
+    <Compile Include="Calculator\RectangleIntegralCalculate.cs" />
+    <Compile Include="Calculator\TrapezoidIntegralCalculator.cs" />
     <Compile Include="Calculator\ICalculatorIntegral.cs" />
+    <Compile Include="Calculator\SimpsonIntegralCalculator.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
