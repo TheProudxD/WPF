@@ -1,18 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\\u043F\u0430\u043F\u043E\u0447\u043A\u0430\\WPF\\",
+  "WorkspaceRootPath": "C:\\Users\\oleni\\OneDrive\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043F\u0430\u043F\u043A\u0430 \u0432\u043B\u0430\u0434\u043E\u0441\u0430\\WPF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{52EEB820-B0BE-47B5-BF87-41501293159B}|WpfAndGit\\WpfAndGit.csproj|c:\\\u043F\u0430\u043F\u043E\u0447\u043A\u0430\\wpf\\wpfandgit\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{52EEB820-B0BE-47B5-BF87-41501293159B}|WpfAndGit\\WpfAndGit.csproj|c:\\users\\oleni\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043F\u0430\u043F\u043A\u0430 \u0432\u043B\u0430\u0434\u043E\u0441\u0430\\wpf\\wpfandgit\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{52EEB820-B0BE-47B5-BF87-41501293159B}|WpfAndGit\\WpfAndGit.csproj|solutionrelative:wpfandgit\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52EEB820-B0BE-47B5-BF87-41501293159B}|WpfAndGit\\WpfAndGit.csproj|c:\\\u043F\u0430\u043F\u043E\u0447\u043A\u0430\\wpf\\wpfandgit\\calculator\\rectangleintegralcalculate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52EEB820-B0BE-47B5-BF87-41501293159B}|WpfAndGit\\WpfAndGit.csproj|solutionrelative:wpfandgit\\calculator\\rectangleintegralcalculate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52EEB820-B0BE-47B5-BF87-41501293159B}|WpfAndGit\\WpfAndGit.csproj|c:\\\u043F\u0430\u043F\u043E\u0447\u043A\u0430\\wpf\\wpfandgit\\calculator\\icalculatorintegral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52EEB820-B0BE-47B5-BF87-41501293159B}|WpfAndGit\\WpfAndGit.csproj|solutionrelative:wpfandgit\\calculator\\icalculatorintegral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52EEB820-B0BE-47B5-BF87-41501293159B}|WpfAndGit\\WpfAndGit.csproj|c:\\users\\oleni\\onedrive\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\\u043F\u0430\u043F\u043A\u0430 \u0432\u043B\u0430\u0434\u043E\u0441\u0430\\wpf\\wpfandgit\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52EEB820-B0BE-47B5-BF87-41501293159B}|WpfAndGit\\WpfAndGit.csproj|solutionrelative:wpfandgit\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
