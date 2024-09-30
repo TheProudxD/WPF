@@ -16,8 +16,8 @@ namespace WPFIntegral
             int count = Convert.ToInt32(tbCount.Text);
             ICalculatorIntegral calculator = GetCalculator();
 
-            double answer = calculator.Calculate(downLimit, upLimit, count, x => 12 * x - Math.Log(11 * x));
-            answer += calculator.Calculate(downLimit, upLimit, count, x => -11 * (12 * x - Math.Log(11 * x) - 11));
+            double answer = calculator.Calculate(downLimit, upLimit, count, x => 12 * x - Math.Log(11 * x) -11);
+           
 
             tbAnswer.Text = answer.ToString();
         }
