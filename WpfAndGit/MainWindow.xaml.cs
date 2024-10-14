@@ -16,7 +16,7 @@ namespace WPFIntegral
             int count = Convert.ToInt32(tbCount.Text);
             ICalculatorIntegral calculator = GetCalculator();
 
-            double answer = calculator.Calculate(downLimit, upLimit, count, x => 12 * x - Math.Log(11 * x) -11);
+            double answer = calculator.Calculate(downLimit, upLimit, count, x => 12 * x - Math.Log(11 * x) - 11);
            
 
             tbAnswer.Text = answer.ToString();
@@ -27,7 +27,7 @@ namespace WPFIntegral
             switch (cmbVarietion.SelectedIndex)
             {
                 case 0:
-                    return new RectangleIntegralCalculate(1);
+                    return new RectangleIntegralCalculate(RectangleIntegralType.Middle);
                 case 1:
                     return new TrapezoidIntegralCalculator();
                 case 2:

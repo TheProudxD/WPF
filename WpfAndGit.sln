@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAndGit", "WpfAndGit\WpfAndGit.csproj", "{52EEB820-B0BE-47B5-BF87-41501293159B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsForProject", "TestsForProject\TestsForProject.csproj", "{B365EC19-00D7-48CD-AF3A-D9C71894BF31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{52EEB820-B0BE-47B5-BF87-41501293159B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52EEB820-B0BE-47B5-BF87-41501293159B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52EEB820-B0BE-47B5-BF87-41501293159B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B365EC19-00D7-48CD-AF3A-D9C71894BF31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B365EC19-00D7-48CD-AF3A-D9C71894BF31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B365EC19-00D7-48CD-AF3A-D9C71894BF31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B365EC19-00D7-48CD-AF3A-D9C71894BF31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
