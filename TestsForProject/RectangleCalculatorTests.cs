@@ -25,7 +25,7 @@ namespace TestsForProject
         [Test]
         public void Calculator_RectangleCalculator_ReturnsCorrectResult()
         {
-            double actual = _calculator.Calculate(_downLimit, _upperLimit, _countOfSplits, _func);
+            double actual = _calculator.Calculate(_downLimit, _upperLimit, _countOfSplits, _func, CalculationType.Sequential);
             Assert.That(actual, Is.EqualTo(5.9997609 * 1e10).Within(1e2));
         }
 
@@ -35,7 +35,7 @@ namespace TestsForProject
             int downLimit = 100;
             int upperLimit = 0;
 
-            Assert.Throws<ArgumentException>(() => _calculator.Calculate(downLimit, upperLimit, _countOfSplits, _func));
+            Assert.Throws<ArgumentException>(() => _calculator.Calculate(downLimit, upperLimit, _countOfSplits, _func, CalculationType.Sequential));
         }
 
         [Test]
@@ -44,19 +44,19 @@ namespace TestsForProject
             int countOfSplits = -1;
 
             Assert.Throws<ArgumentOutOfRangeException>(() =>
-                _calculator.Calculate(_downLimit, _upperLimit, countOfSplits, _func));
+                _calculator.Calculate(_downLimit, _upperLimit, countOfSplits, _func, CalculationType.Sequential));
         }
 
         [Test]
         public void WhenFunctionIsNull_ThrowsException()
         {
-            Assert.Throws<ArgumentException>(() => _calculator.Calculate(_downLimit, _upperLimit, _countOfSplits, null));
+            Assert.Throws<ArgumentException>(() => _calculator.Calculate(_downLimit, _upperLimit, _countOfSplits, null, CalculationType.Sequential));
         }
 
         [Test]
         public void ResultIsGreaterThanOrEqualToZero()
         {
-            double actual = _calculator.Calculate(_downLimit, _upperLimit, _countOfSplits, _func);
+            double actual = _calculator.Calculate(_downLimit, _upperLimit, _countOfSplits, _func, CalculationType.Sequential);
             Assert.That(actual, Is.GreaterThanOrEqualTo(0));
         }
     }

@@ -5,7 +5,7 @@ namespace WPFIntegral
 {
     public class TrapezoidIntegralCalculator : ICalculatorIntegral
     {
-        public double Calculate(double down, double up, int N, Func<double, double> func)
+        public double Calculate(double down, double up, int N, Func<double, double> func, CalculationType sequential)
         {
             double h = (up - down) / N;
             double sum = Enumerable.Range(0, N).Sum(s => func(s * h + down));

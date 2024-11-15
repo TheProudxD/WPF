@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace WPFIntegral
 {
@@ -8,10 +11,12 @@ namespace WPFIntegral
         Middle,
         Right
     }
-    
+
     public class RectangleIntegralCalculate : ICalculatorIntegral
     {
         private readonly double _k;
+
+        private object _lock = new object();
 
         public RectangleIntegralCalculate(RectangleIntegralType rectangleIntegralType)
         {
@@ -31,25 +36,45 @@ namespace WPFIntegral
             }
         }
 
-        public double Calculate(double down, double up, int n, Func<double, double> func)
+        public double Calculate(double down, double up, int n, Func<double, double> func, CalculationType sequential)
         {
             if (down > up)
                 throw new ArgumentException("Down are greater than Up");
 
             if (n <= 0)
                 throw new ArgumentOutOfRangeException(nameof(n) + "is not positive");
-            
+
             if (func == null)
                 throw new ArgumentException("Function is null");
 
             double sum = 0;
             double h = (up - down) / n;
-
             down += h * _k;
 
-            for (int i = 0; i < n; i++)
+            switch (sequential)
             {
-                sum += func(down + h * i);
+                case CalculationType.Sequential:
+                    for (int i = 0; i < n; i++)
+                        sum += func(down + h * i);
+
+                    break;
+                case CalculationType.Parallel:
+                    sum = ParallelEnumerable.Range(0, n).Sum(i => func(down + h * i));
+
+                    /*
+                    Parallel.For(0, n, i =>
+                    {
+                        lock (_lock)
+                        {
+                            sum += func(down + h * i);
+                        }
+                    });
+                    */
+                    
+                    //Parallel.For(0, n, i => sum += func(down + h * i));
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(sequential), sequential, null);
             }
 
             return h * sum;

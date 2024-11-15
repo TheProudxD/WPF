@@ -1,8 +1,16 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Globalization;
 using System.Windows;
 
 namespace WPFIntegral
 {
+    public enum CalculationType
+    {
+        Sequential,
+        Parallel
+    }
+
     public partial class MainWindow : Window
     {
         public MainWindow() => InitializeComponent();
@@ -15,11 +23,20 @@ namespace WPFIntegral
             double downLimit = Convert.ToDouble(tbDownLimit.Text);
             int count = Convert.ToInt32(tbCount.Text);
             ICalculatorIntegral calculator = GetCalculator();
+            Func<double, double> func = x => 12 * x - Math.Log(11 * x) - 11;
 
-            double answer = calculator.Calculate(downLimit, upLimit, count, x => 12 * x - Math.Log(11 * x) - 11);
-           
+            var stopwatch = Stopwatch.StartNew();
+            double sequentialResult = calculator.Calculate(downLimit, upLimit, count, func, CalculationType.Sequential);
+            stopwatch.Stop();
+            double sequentialTime = stopwatch.ElapsedMilliseconds;
 
-            tbAnswer.Text = answer.ToString();
+            stopwatch = Stopwatch.StartNew();
+            double parallelResult = calculator.Calculate(downLimit, upLimit, count, func, CalculationType.Parallel);
+            stopwatch.Stop();
+            double parallelTime = stopwatch.ElapsedMilliseconds;
+
+            tbAnswer.Text =
+                $"Последовательно: {sequentialResult} (Время: {sequentialTime} мс)\nПараллельно: {parallelResult} (Время: {parallelTime} мс)";
         }
 
         private ICalculatorIntegral GetCalculator()

@@ -4,7 +4,7 @@ namespace WPFIntegral
 {
     public class SimpsonIntegralCalculator : ICalculatorIntegral
     {
-        public double Calculate(double down, double up, int N, Func<double, double> func)
+        public double Calculate(double down, double up, int N, Func<double, double> func, CalculationType sequential)
         {
             double sum = 0;
             double h = (up - down) / N;
