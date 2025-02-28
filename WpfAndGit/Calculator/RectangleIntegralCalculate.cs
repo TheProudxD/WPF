@@ -54,24 +54,10 @@ namespace WPFIntegral
             switch (sequential)
             {
                 case CalculationType.Sequential:
-                    for (int i = 0; i < n; i++)
-                        sum += func(down + h * i);
-
+                    sum = Enumerable.Range(0, n).Sum(i => func(down + h * i));
                     break;
                 case CalculationType.Parallel:
                     sum = ParallelEnumerable.Range(0, n).Sum(i => func(down + h * i));
-
-                    /*
-                    Parallel.For(0, n, i =>
-                    {
-                        lock (_lock)
-                        {
-                            sum += func(down + h * i);
-                        }
-                    });
-                    */
-                    
-                    //Parallel.For(0, n, i => sum += func(down + h * i));
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(sequential), sequential, null);
